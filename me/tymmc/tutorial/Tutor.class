@@ -1,0 +1,37 @@
+package me.tymmc.tutorial;
+
+import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Tutor extends JavaPlugin{
+	
+	public void onEnable()
+	{
+		getLogger().info("Plugin Enabled");
+	}
+	
+	public void onDisable()
+	{
+		
+	}
+	
+	//Perms Tutorial
+	public boolean onCommand(Command cmd, CommandSender sender, String label, String[] args)
+	{
+		if(label.equalsIgnoreCase("tut"))
+		{
+		  if(player.hasPermission("tut.tutcmd")
+		  {
+		    player.sendMessage("U Has Permission");
+		  }else {
+		    player.sendMessage("U not has permission");
+		  }
+		    return true;
+		}
+		return false;
+	}
+
+}
